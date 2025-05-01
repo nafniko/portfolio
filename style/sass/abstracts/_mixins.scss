@@ -1,0 +1,169 @@
+// Mixin pour les media queries
+@use "../abstracts/variables" as *;
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: #{$breakpoint-sm}) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: #{$breakpoint-md}) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: #{$breakpoint-lg}) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: #{$breakpoint-xl}) {
+      @content;
+    }
+  }
+}
+
+// Mixin pour centrer un élément
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hero-layout(
+  $bg: none,
+  $text-color: #fff,
+  $gap: 2rem,
+  $padding: 4rem 2rem
+) {
+  background: $bg;
+  color: $text-color;
+  padding: $padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+  flex-wrap: wrap;
+
+  .hero-content {
+    flex: 1 1 45%;
+    text-align: left;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+
+      a,
+      button {
+        padding: 0.75rem 1.5rem;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+    }
+  }
+
+  .hero-image {
+    flex: 1 1 45%;
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+@mixin section-perso(
+  $bg: none,
+  $text-color: #fff,
+  $gap: 2rem,
+  $padding: 4rem 2rem
+) {
+  background: $bg;
+  color: $text-color;
+  padding: $padding;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+  flex-wrap: wrap;
+
+  .perso-content {
+    text-align: left;
+    flex: 0 1 50%;
+  }
+
+  .perso-image {
+    img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+@mixin logo-slider(
+  $logo-width: 150px,
+  $padding: 50px,
+  $gap: 20px,
+  $duration: 30s
+) {
+  .logo-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: $padding;
+  }
+
+  .logo-track {
+    display: flex;
+    width: max-content;
+    animation: scroll $duration linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  .logo {
+    flex: 0 0 auto;
+    width: $logo-width;
+    padding: $gap;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+.projects {
+    background: linear-gradient(to right,#2ecc71 ,#3498db  );
+  @include respond-to(sm) {
+    flex-direction: column;
+  }
+  @include respond-to(md) {
+    flex-direction: row;
+  }
+  @include respond-to(lg) {
+    flex-direction: row;
+  }
+  @include respond-to(xl) {
+    flex-direction: row;
+  }
+  .row{
+    justify-content: center;
+  }
+  text-align: center;
+ 
+}

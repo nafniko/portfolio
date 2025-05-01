@@ -1,3 +1,5 @@
+
+
 // Abstracts
 @use 'abstracts/variables';
 @use 'abstracts/mixins';
@@ -17,6 +19,9 @@
 @use 'components/button';
 @use 'components/card';
 @use 'components/form';
+@use 'components/hero';
+@use 'components/section_perso';
+@use 'components/slider-logo';
 
 // Pages
 @use 'pages/home';

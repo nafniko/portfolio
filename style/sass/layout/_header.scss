@@ -1,0 +1,48 @@
+// Styles de base pour l'en-tête
+@use '../abstracts/variables' as *;
+header {
+    background-color: $primary-color;
+    padding: $spacing-unit;
+    color: white;
+    text-align: center;
+
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+  
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: $spacing-unit * 2;
+
+      ul{
+        display: flex;
+        gap: $spacing-unit * 2;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        height: auto;
+      }
+  
+      a {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  

@@ -1,0 +1,51 @@
+// Applique les variables de couleur et de typographie
+@use '../abstracts/variables' as *;
+
+body {
+  font-family:$font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Définir le comportement de tous les titres
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  margin-bottom: $spacing-unit;
+}
+
+// Définit le comportement des paragraphes
+p {
+  margin-bottom: $spacing-unit;
+  font-size: 1rem;
+}
+
+// Ajout de base aux boutons
+button {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-unit $spacing-unit * 2;
+  border-radius: 5px;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+li {
+  text-decoration: none;
+  list-style: none;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+section {
+  padding: $spacing-unit * 2;
+  
+
+}
+

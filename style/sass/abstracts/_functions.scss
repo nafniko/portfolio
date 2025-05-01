@@ -1,0 +1,15 @@
+// Fonction pour ajuster la luminosité d'une couleur
+@use '../abstracts/variables' as *;
+@function lighten($color, $amount) {
+  @return lighten($color, $amount);
+}
+
+// Fonction pour calculer l'opacité d'une couleur
+@function opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// Fonction pour calculer un espacements basé sur une unité de base
+@function spacing($value) {
+  @return $value * $spacing-unit;
+}

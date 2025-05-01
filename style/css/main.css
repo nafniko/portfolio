@@ -1,0 +1,364 @@
+@charset "UTF-8";
+/* Réinitialisation de la plupart des éléments HTML */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Suppression des styles par défaut des éléments de formulaire */
+input,
+textarea,
+button,
+select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Suppression des espaces blancs autour des images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Liens sans soulignement */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Georgia", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Georgia", sans-serif;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #217dbb;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+li:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+h4, h5, h6 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: #3498db;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header nav li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  height: auto;
+}
+header nav a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+footer p {
+  font-size: 0.875rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5rem;
+}
+
+.col {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 2%;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.card .card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.card .card-title h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.card:hover .card-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-section {
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 35%, rgb(0, 212, 255) 100%);
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.hero-section .hero-content {
+  flex: 1 1 45%;
+  text-align: left;
+}
+.hero-section .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero-section .hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.hero-section .hero-content .hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.hero-section .hero-content .hero-buttons a,
+.hero-section .hero-content .hero-buttons button {
+  padding: 0.75rem 1.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero-section .hero-content .hero-buttons a:hover,
+.hero-section .hero-content .hero-buttons button:hover {
+  background-color: #2980b9;
+}
+.hero-section .hero-image {
+  flex: 1 1 45%;
+}
+.hero-section .hero-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.perso {
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(2, 2, 12) 35%, rgb(0, 212, 255) 100%);
+  color: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.perso .perso-content {
+  text-align: left;
+  flex: 0 1 50%;
+}
+.perso .perso-image img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 50px;
+}
+
+.logo-track {
+  display: flex;
+  width: -moz-max-content;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+.logo-track:hover {
+  animation-play-state: paused;
+}
+
+.logo {
+  flex: 0 0 auto;
+  width: 150px;
+  padding: 20px;
+  text-align: center;
+}
+.logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.entreprise {
+  background: linear-gradient(to right, #3498db, #2ecc71);
+}
+
+.projects {
+  background: linear-gradient(to right, #2ecc71, #3498db);
+  text-align: center;
+}
+@media (max-width: 576px) {
+  .projects {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: row;
+  }
+}
+@media (max-width: 1024px) {
+  .projects {
+    flex-direction: row;
+  }
+}
+@media (max-width: 1200px) {
+  .projects {
+    flex-direction: row;
+  }
+}
+.projects .row {
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

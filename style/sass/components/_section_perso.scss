@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.perso {
+    @include section-perso($bg: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(2, 2, 12) 35%, rgba(0, 212, 255, 1) 100%));
+
+}

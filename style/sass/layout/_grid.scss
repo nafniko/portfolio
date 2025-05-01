@@ -1,0 +1,20 @@
+// Styles pour une grille basique
+@use '../abstracts/variables' as *;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$spacing-unit / 2;
+  }
+  
+  .col {
+    flex: 1;
+    padding: $spacing-unit / 2;
+  }
+  

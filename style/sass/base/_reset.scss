@@ -1,0 +1,31 @@
+/* Réinitialisation de la plupart des éléments HTML */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Suppression des styles par défaut des éléments de formulaire */
+input,
+textarea,
+button,
+select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Suppression des espaces blancs autour des images */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Liens sans soulignement */
+a {
+  text-decoration: none;
+  color: inherit;
+}

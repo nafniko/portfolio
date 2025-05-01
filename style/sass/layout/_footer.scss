@@ -1,0 +1,13 @@
+// Styles de base pour le pied de page
+@use '../abstracts/variables' as *;
+footer {
+    background-color: $background-color;
+    padding: $spacing-unit;
+    color: $text-color;
+    text-align: center;
+  
+    p {
+      font-size: 0.875rem;
+    }
+  }
+  
